@@ -18,7 +18,7 @@ if not chrome:
 for src in sorted(glob.glob(os.path.join(HERE, "截图源文件", "*.html"))):
     meta = re.search(r'<meta name="shot" content="([^|]+)\|([^|]+)\|(\d+)x(\d+)"', open(src, encoding="utf-8").read())
     folder, name, w, h = meta.group(1), meta.group(2), meta.group(3), meta.group(4)
-    out_dir = os.path.join(ROOT, folder, "images")
+    out_dir = os.path.join(ROOT, folder, "imgs")
     os.makedirs(out_dir, exist_ok=True)
     out = os.path.join(out_dir, name)
     subprocess.run([chrome, "--headless", "--no-sandbox", "--disable-gpu", "--hide-scrollbars",
