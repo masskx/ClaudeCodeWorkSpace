@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8">
+<meta name="shot" content="04-用脚本揪出参考文献里的幽灵论文|shot-terminal.png|980x450">
+<style>
+body{margin:0;background:#1b1e27;font-family:"DejaVu Sans Mono","WenQuanYi Zen Hei",monospace;color:#d6dcec}
+.win{margin:20px;border-radius:10px;overflow:hidden;background:#232733;box-shadow:0 8px 30px rgba(0,0,0,.45)}
+.bar{background:#171a22;padding:10px 14px;display:flex;gap:8px;align-items:center;font-size:13px;color:#7d869b;font-family:"WenQuanYi Zen Hei",sans-serif}
+.d{width:12px;height:12px;border-radius:50%}
+pre{margin:0;padding:18px 22px 22px;font-size:14.5px;line-height:1.7;white-space:pre-wrap}
+.p{color:#7cc7ff}.ok{color:#7ddc9a}.bad{color:#ff7b7b}.warn{color:#ffc857}
+</style></head><body><div class="win">
+<div class="bar"><span class="d" style="background:#ff5f56"></span><span class="d" style="background:#ffbd2e"></span><span class="d" style="background:#27c93f"></span><span style="margin-left:12px">终端（演示数据，第 3 条为虚构文献）</span></div>
+<pre><span class="p">$</span> python check_refs.py refs.txt
+
+[1/3] <span class="ok">基本可信</span>  相似度 1.00
+    原文:He K, Zhang X, Ren S, Sun J. Deep residual learning for image recognition. CVPR,
+    匹配:Deep Residual Learning for Image Recognition  DOI:10.1109/CVPR.2016.90
+[2/3] <span class="ok">基本可信</span>  相似度 1.00
+    原文:LeCun Y, Bengio Y, Hinton G. Deep learning. Nature, 2015.
+    匹配:Deep learning  DOI:10.1038/nature14539
+[3/3] <span class="bad">未找到匹配</span>  相似度 0.34
+    原文:Zhang W, Li M. A unified self-evolving attention framework for quantum cross-dom
+    匹配:Cross-domain transfer learning in quantum dot arrays  DOI:10.1000/demo.0003
+
+已保存:refs_result.csv
+需要人工复核的条目:1 / 3</pre></div></body></html>
