@@ -4,6 +4,26 @@ This repository is the dedicated working directory for Claude Code. Claude Code 
 
 > **For Claude Code:** read this whole file at the start of every session. The rules below are binding. If a request conflicts with them, say so and ask before proceeding.
 
+## Current status
+
+_Last updated: 2026-10-11_
+
+| Project | Status | Progress | Next step |
+|---------|--------|----------|-----------|
+| [WeChat Official Account](WeChat%20Official%20Account/README.md) | Active | 5 of 6 requested articles drafted (01–05); 12 earlier topic ideas kept as `.txt` outlines | See below |
+
+**WeChat Official Account** (Chinese-language AI tutorials and research tips for mainland graduate students):
+
+- **Done:** articles 01–05 each have `article.md`, a publishing memo (`发布备忘.md`) and simulated screenshots, except 04. Image/screenshot tooling is in `_工具/`.
+- **Blocked on you:**
+  - The sixth topic ("Jev" for paper writing) is not written because I can't tell what it refers to. Tell me the full name.
+  - Confirm that "Work Body" means Tencent WorkBuddy (assumed in article 04).
+- **Still to do by hand:**
+  - No article has a cover image yet (`imgs/cover.png`); the prompts are in each memo.
+  - Each article has at least one AI-image prompt to generate.
+  - Article 04 has 3 screenshot placeholders for the real software.
+  - Articles 02–05 describe tools and methods that haven't been tested for real or checked against the original sources; use each memo's "发布前核对" checklist before publishing.
+
 ## Repository layout
 
 ```
@@ -94,4 +114,4 @@ Keep it current: update the project README whenever setup, usage, or structure c
 
 | Project | Folder | Description | Status |
 |---------|--------|-------------|--------|
-| _none yet_ | | | |
+| WeChat Official Account | `WeChat Official Account/` | Chinese AI-tutorial and research-tips articles for graduate students (drafts, publishing memos, screenshot tooling) | Active |
