@@ -1,0 +1,18 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8">
+<meta name="shot" content="09-代码能跑通结果就对吗AI写实验代码的5个隐形bug|01-screenshot-demo-output.png|960x340">
+<style>
+body{margin:0;background:#1b1e27;font-family:"WenQuanYi Zen Hei","Noto Sans CJK SC",sans-serif;color:#d6dcec}
+.win{margin:20px;border-radius:10px;overflow:hidden;background:#232733;box-shadow:0 8px 30px rgba(0,0,0,.45)}
+.bar{background:#171a22;padding:10px 14px;display:flex;gap:8px;align-items:center;font-size:13px;color:#7d869b}
+.d{width:12px;height:12px;border-radius:50%}
+.tabs{background:#1e212b}.tab{background:#232733;display:inline-block;padding:9px 18px;font-size:14px;border-top:2px solid #fca311;color:#fff;font-family:"DejaVu Sans Mono",monospace}
+pre{margin:0;padding:16px 22px 20px;font-family:"DejaVu Sans Mono","WenQuanYi Zen Hei",monospace;font-size:14.5px;line-height:1.7;white-space:pre-wrap}
+.p{color:#7cc7ff}.ok{color:#7ddc9a}.bad{color:#ff7b7b}.warn{color:#ffc857}.g{color:#7d869b}.k{color:#ff9d5c}.s{color:#9fd57c}
+</style></head><body><div class="win"><div class="bar"><span class="d" style="background:#ff5f56"></span><span class="d" style="background:#ffbd2e"></span><span class="d" style="background:#27c93f"></span><span style="margin-left:12px">终端：python3 bugs_demo.py（真实运行结果）</span></div><pre><span class="p">$</span> python3 bugs_demo.py
+
+1 先挑特征再划分（随机标签）    报告 0.903   诚实 0.535
+2 样本重复（随机标签）          报告 1.000   诚实 0.452
+3 用测试集挑配置（随机标签）    报告 0.616   诚实 0.507
+4 时间序列随机划分（R²）        报告 0.995   诚实 -2.420
+5 只汇报最好的种子（准确率）    报告 0.800   诚实 0.652 ± 0.049</pre></div></body></html>
