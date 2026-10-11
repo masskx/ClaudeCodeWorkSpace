@@ -15,6 +15,7 @@ _Last updated: 2026-10-11_
 **WeChat Official Account** (Chinese-language AI tutorials and research tips for mainland graduate students):
 
 - **Done:** articles 01–05 each have `article.md`, a publishing memo (`发布备忘.md`) and simulated screenshots, except 04. Image/screenshot tooling is in `_工具/`.
+- **Topic bank:** `选题库/` holds 20 reserved topics with sources and priorities (`00-选题总表.md`), plus research limits (`调研说明.md`).
 - **Blocked on you:**
   - The sixth topic ("Jev" for paper writing) is not written because I can't tell what it refers to. Tell me the full name.
   - Confirm that "Work Body" means Tencent WorkBuddy (assumed in article 04).
