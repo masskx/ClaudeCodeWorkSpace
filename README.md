@@ -10,11 +10,12 @@ _Last updated: 2026-10-11_
 
 | Project | Status | Progress | Next step |
 |---------|--------|----------|-----------|
-| [WeChat Official Account](WeChat%20Official%20Account/README.md) | Active | 5 of 6 requested articles drafted (01–05); 12 earlier topic ideas kept as `.txt` outlines | See below |
+| [WeChat Official Account](WeChat%20Official%20Account/README.md) | Active | 5 of 6 requested articles drafted (01–05); 20-topic bank; 12 earlier topic ideas kept as `.txt` outlines | See below |
 
 **WeChat Official Account** (Chinese-language AI tutorials and research tips for mainland graduate students):
 
 - **Done:** articles 01–05 each have `article.md`, a publishing memo (`发布备忘.md`) and simulated screenshots, except 04. Image/screenshot tooling is in `_工具/`.
+- **Image rule:** code-generated images that show a person talking to an Agent must look like the Claude Code desktop client (shared stylesheet `_工具/截图源文件/_agent-ui.css`; rule in the project README). Applied so far to the images in articles 01 and 02; plain terminal shots are exempt.
 - **Topic bank:** `选题库/` holds 20 reserved topics with sources and priorities (`00-选题总表.md`), plus research limits (`调研说明.md`).
 - **Blocked on you:**
   - The sixth topic ("Jev" for paper writing) is not written because I can't tell what it refers to. Tell me the full name.
