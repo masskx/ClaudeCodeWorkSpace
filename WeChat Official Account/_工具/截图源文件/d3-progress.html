@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8">
+<meta name="shot" content="05-Agent能连着干几个小时了科研项目怎么管才不翻车|04-screenshot-progress-md.png|900x520">
+<style>
+body{margin:0;background:#1b1e27;font-family:"WenQuanYi Zen Hei","Noto Sans CJK SC",sans-serif;color:#cfd6e6}
+.win{margin:20px;border-radius:10px;overflow:hidden;background:#232733;box-shadow:0 8px 30px rgba(0,0,0,.45)}
+.bar{background:#171a22;padding:10px 14px;display:flex;gap:8px;align-items:center;font-size:13px;color:#7d869b}
+.d{width:12px;height:12px;border-radius:50%}
+.tabs{background:#1e212b}.tab{background:#232733;display:inline-block;padding:9px 18px;font-size:14px;border-top:2px solid #fca311;color:#fff;font-family:"DejaVu Sans Mono",monospace}
+pre{margin:0;padding:14px 22px 20px;font-family:"DejaVu Sans Mono","WenQuanYi Zen Hei",monospace;font-size:14.5px;line-height:1.75}
+.h{color:#ff9d5c;font-weight:bold}.ok{color:#7ddc9a}.w{color:#ffc857}.g{color:#6e7891}
+</style></head><body><div class="win">
+<div class="bar"><span class="d" style="background:#ff5f56"></span><span class="d" style="background:#ffbd2e"></span><span class="d" style="background:#27c93f"></span><span style="margin-left:12px">我的课题 — progress.md（示意）</span></div>
+<div class="tabs"><span class="tab">progress.md</span></div>
+<pre><span class="h"># 进度记录</span>
+
+<span class="h">## 10 月 9 日 夜间</span>
+- <span class="ok">完成</span>：exp-006（baseline 复跑，3 个种子）
+  val_acc = 76.0 ± 0.3，结果在 results/exp006.json
+- <span class="w">进行中</span>：exp-007（学习率 3e-4），seed 0 已跑完，seed 1、2 排队
+- <span class="w">卡点</span>：exp-007 的 seed 1 在第 31 轮 loss 变成 NaN。
+  已记下配置，<span class="ok">没有修改评测脚本</span>，等人决定怎么处理
+- 下一步：exp-007 跑完后与 exp-006 对比，差异写在这里</pre>
+</div></body></html>
