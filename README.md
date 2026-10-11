@@ -10,12 +10,14 @@ _Last updated: 2026-10-11_
 
 | Project | Status | Progress | Next step |
 |---------|--------|----------|-----------|
+
 | [WeChat Official Account](WeChat%20Official%20Account/README.md) | Active | 11 articles drafted (01–11; the user's "Jev" topic is still open); 12 earlier topic ideas kept as `.txt` outlines | See below |
 
 **WeChat Official Account** (Chinese-language AI tutorials and research tips for mainland graduate students):
 
 - **Done:** articles 01–11 each have `article.md`, a publishing memo (`发布备忘.md`) and simulated screenshots, except 04. Image/screenshot tooling is in `_工具/`.
 - **Image rule:** code-generated images that show a person talking to an Agent must look like the Claude Code desktop client (shared stylesheet `_工具/截图源文件/_agent-ui.css`; rule in the project README). Applied so far to the images in articles 01, 02 and 11 (article 11 is about DeepSeek Harness, so those images are captioned as not its real UI); plain terminal shots are exempt.
+
 - **Topic bank:** `选题库/` holds 20 reserved topics with sources and priorities (`00-选题总表.md`), plus research limits (`调研说明.md`); 5 of them are now written up as articles 06–10.
 - **Blocked on you:**
   - The sixth topic ("Jev" for paper writing) is not written because I can't tell what it refers to. Tell me the full name.
