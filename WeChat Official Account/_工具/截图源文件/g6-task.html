@@ -1,0 +1,14 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8">
+<meta name="shot" content="11-用DeepSeekHarness做科研装这几个插件把流程跑通|06-screenshot-task-supervisor.png|1000x700">
+<link rel="stylesheet" href="_agent-ui.css">
+</head><body><div class="app">
+<div class="side"><div class="h">会话</div><div class="s on">文献调研</div><div class="s">读论文</div><div class="s">写综述初稿</div><div class="s">整理文献库</div></div>
+<div class="main">
+<div class="top"><b>thesis-lit</b><span>·</span><span>dsh-task-supervisor</span></div>
+<div class="chat">
+<div class="u">/task 在两周内做完文献调研：至少覆盖近三年的会议和期刊，每篇要有结构化笔记，最后给我一张对比表。</div><div class="a"><div class="body"><p>已提交计划，等待审查。<b>计划审查：退回。</b></p><ul><li>覆盖检查：<span class="tag ty">缺失</span> 你要求“近三年的会议和期刊”，计划里只有会议。</li><li>验收标准：<span class="tag ty">来源不明</span> “每篇结构化笔记”没有写清字段。</li><li>依赖顺序：<span class="tag tg">通过</span> 先检索，再精读，最后出对比表。</li></ul><p>已按退回意见修订计划：增加“期刊检索”节点，笔记字段固定为 问题 / 方法 / 数据集 / 结论 / 局限。</p></div></div><div class="tool"><span class="n">/task approve</span><span class="p">等待你批准后执行</span><span class="r w">待批准</span></div><div class="a"><div class="body"><p>提示：每个节点通过审查后才会放行下一个节点。审查默认是“看日志”，不会重新跑一遍实验，所以<b>通过审查不等于没有遗漏</b>。</p></div></div>
+</div>
+<div class="input"><span>输入任务…</span><i>↑</i></div>
+<div class="note">示意界面（仿桌面客户端样式），不是 DeepSeek Harness 的真实界面；对话、文件和数字均为示意，工具名与参数取自各插件 README。</div>
+</div></div></body></html>

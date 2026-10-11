@@ -1,0 +1,14 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8">
+<meta name="shot" content="11-用DeepSeekHarness做科研装这几个插件把流程跑通|04-screenshot-deepread.png|1000x720">
+<link rel="stylesheet" href="_agent-ui.css">
+</head><body><div class="app">
+<div class="side"><div class="h">会话</div><div class="s">文献调研</div><div class="s on">读论文</div><div class="s">写综述初稿</div><div class="s">整理文献库</div></div>
+<div class="main">
+<div class="top"><b>thesis-lit</b><span>·</span><span>deepread</span></div>
+<div class="chat">
+<div class="u">用 map 模式读 attention-is-all-you-need.pdf，导出 html。每条结论要带证据位置和把握程度。</div><div class="tool"><span class="n">deepread</span><span class="p">path=attention-is-all-you-need.pdf, depth=map, export=html</span><span class="r">后台任务 · 按页推进</span></div><div class="tool"><span class="n">job_output</span><span class="p">第 1–15 页</span><span class="r">完成</span></div><div class="tool"><span class="n">Write</span><span class="p">deepread-output/attention-map.html</span><span class="r">已导出</span></div><div class="a"><div class="body"><table><tr><th>结论</th><th>证据位置</th><th>把握</th></tr><tr><td>只用注意力机制，不用循环和卷积，就能做序列转换</td><td>摘要；第 1 页</td><td><span class="tag tg">高</span></td></tr><tr><td>在 WMT14 英德翻译上取得 28.4 BLEU</td><td>结果表；第 8 页</td><td><span class="tag tg">高</span></td></tr><tr><td>多头注意力“让模型从不同子空间获取信息”</td><td>第 4–5 页</td><td><span class="tag ty">中：论文给的是解释，不是消融证明</span></td></tr></table><p>还导出了 mindmap（.mm，可导入 XMind）。注意：这是 Agent 的阅读结果，进论文前请回到原文核对页码。</p></div></div>
+</div>
+<div class="input"><span>输入任务…</span><i>↑</i></div>
+<div class="note">示意界面（仿桌面客户端样式），不是 DeepSeek Harness 的真实界面；对话、文件和数字均为示意，工具名与参数取自各插件 README。</div>
+</div></div></body></html>
