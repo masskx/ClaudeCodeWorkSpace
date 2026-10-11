@@ -44,6 +44,10 @@ cd ~/文献整理
 识别不出标题、或者没有文字层的扫描件，把握程度标“低”，并写明原因。
 ```
 
+助手运行起来大概是这样：
+
+![AI 助手读取 PDF 的过程](imgs/04-screenshot-agent-log.png)
+
 它会生成一张这样的表：
 
 ![manifest.csv 示意](imgs/02-screenshot-manifest.png)
@@ -53,6 +57,15 @@ cd ~/文献整理
 花五分钟看一下 manifest.csv，重点看两处：标“低”的行，以及主题分类合不合理。
 
 AI 容易认错的，常见是几类文件：扫描版 PDF、中文文献、一个 PDF 里装了好几篇文章的合集。这些要自己判断。
+
+![AI 容易认错的三类文件](imgs/05-infographic-three-hard-cases.png)
+
+> 【AI 生图提示词｜infographic｜sketch-notes + macaron｜16:9｜生成后存为 imgs/05-infographic-three-hard-cases.png，用完删掉本引用块】
+> ZONES：三张并排的圆角卡片，每张上方画一个文件图标（依次带有扫描纹理、中文字符轮廓、叠在一起的多页文档），下方一行说明；每张卡片右上角一个小的黄色警示三角。
+> LABELS：卡片标题「扫描版 PDF」「中文文献」「合集文件」；说明「没有文字层」「标题格式不统一」「一个文件里有多篇」；底部一行「这三类，自己判断」。文字少而大，手写体风格。
+> COLORS：三张卡片依次为淡蓝、淡薰衣草紫、淡桃色，背景暖奶油色。颜色名称只是渲染指导，不要作为文字出现在画面里。
+> STYLE：sketch-notes，黑色略带抖动的手绘线条，粉彩信息框；构图干净，大量留白，无复杂背景。
+> ASPECT：16:9
 
 ## 第四步：确认以后再执行
 
@@ -65,6 +78,10 @@ manifest.csv 我已确认，请按它执行：
 3. 生成“整理后/索引.md”：每篇一行，包含新文件名、一句话概括、原文件名。
 4. 不要删除任何原文件。
 ```
+
+执行完，打开索引.md，大概是这样：
+
+![索引.md 预览](imgs/06-screenshot-index-preview.png)
 
 ![完整流程](imgs/03-flowchart-workflow.png)
 

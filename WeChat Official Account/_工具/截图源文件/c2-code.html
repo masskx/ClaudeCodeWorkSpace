@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8">
+<meta name="shot" content="03-科研绘图别只会让AI出PNG三类图三条路|04-screenshot-plot-code.png|900x560">
+<style>
+body{margin:0;background:#1b1e27;font-family:"WenQuanYi Zen Hei","Noto Sans CJK SC",sans-serif;color:#cfd6e6}
+.win{margin:20px;border-radius:10px;overflow:hidden;background:#232733;box-shadow:0 8px 30px rgba(0,0,0,.45)}
+.bar{background:#171a22;padding:10px 14px;display:flex;gap:8px;align-items:center;font-size:13px;color:#7d869b}
+.d{width:12px;height:12px;border-radius:50%}
+.tabs{background:#1e212b}.tab{background:#232733;display:inline-block;padding:9px 18px;font-size:14px;border-top:2px solid #fca311;color:#fff;font-family:"DejaVu Sans Mono",monospace}
+pre{margin:0;padding:14px 20px 18px;font-family:"DejaVu Sans Mono","WenQuanYi Zen Hei",monospace;font-size:13.8px;line-height:1.6}
+.k{color:#ff9d5c}.s{color:#9fd57c}.c{color:#6e7891}.f{color:#7cc7ff}
+</style></head><body><div class="win">
+<div class="bar"><span class="d" style="background:#ff5f56"></span><span class="d" style="background:#ffbd2e"></span><span class="d" style="background:#27c93f"></span><span style="margin-left:12px">plot_acc.py（AI 生成的绘图代码，示意）</span></div>
+<div class="tabs"><span class="tab">plot_acc.py</span></div>
+<pre><span class="k">import</span> pandas <span class="k">as</span> pd
+<span class="k">import</span> matplotlib.pyplot <span class="k">as</span> plt
+
+plt.rcParams.update({<span class="s">"font.family"</span>: <span class="s">"Arial"</span>, <span class="s">"font.size"</span>: 8, <span class="s">"pdf.fonttype"</span>: 42})
+
+df = pd.read_csv(<span class="s">"results/acc.csv"</span>)          <span class="c"># 数字全部来自你的数据文件</span>
+fig, ax = plt.subplots(figsize=(8.5 / 2.54, 6.5 / 2.54), dpi=300)  <span class="c"># 单栏 8.5 cm</span>
+
+styles = {<span class="s">"Baseline"</span>: (<span class="s">"#8a8f9c"</span>, <span class="s">"--"</span>),
+          <span class="s">"+ Module A"</span>: (<span class="s">"#e08a2c"</span>, <span class="s">"-"</span>),
+          <span class="s">"Ours"</span>: (<span class="s">"#2f6fed"</span>, <span class="s">"-"</span>)}
+<span class="k">for</span> name, (color, ls) <span class="k">in</span> styles.items():
+    ax.plot(df[<span class="s">"epoch"</span>], df[name], color=color, linestyle=ls,
+            linewidth=1.2, label=name)
+
+ax.set_xlabel(<span class="s">"Epoch"</span>)
+ax.set_ylabel(<span class="s">"Validation accuracy (%)"</span>)
+ax.legend(frameon=<span class="k">False</span>)
+fig.tight_layout()
+fig.savefig(<span class="s">"figures/acc.pdf"</span>)                 <span class="c"># 矢量图，放大不糊</span>
+fig.savefig(<span class="s">"figures/acc.png"</span>)</pre>
+</div></body></html>
