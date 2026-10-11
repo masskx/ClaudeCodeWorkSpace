@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8">
+<meta name="shot" content="11-用DeepSeekHarness做科研装这几个插件把流程跑通|01-screenshot-install.png|960x300">
+<style>
+body{margin:0;background:#1b1e27;font-family:"DejaVu Sans Mono","WenQuanYi Zen Hei",monospace;color:#d6dcec}
+.win{margin:20px;border-radius:10px;overflow:hidden;background:#232733;box-shadow:0 8px 30px rgba(0,0,0,.45)}
+.bar{background:#171a22;padding:10px 14px;display:flex;gap:8px;align-items:center;font-size:13px;color:#7d869b;font-family:"WenQuanYi Zen Hei",sans-serif}
+.d{width:12px;height:12px;border-radius:50%}
+pre{margin:0;padding:18px 22px 22px;font-size:15px;line-height:1.85;white-space:pre-wrap}
+.p{color:#7cc7ff}.g{color:#7d869b}
+</style></head><body><div class="win">
+<div class="bar"><span class="d" style="background:#ff5f56"></span><span class="d" style="background:#ffbd2e"></span><span class="d" style="background:#27c93f"></span><span style="margin-left:12px">终端（示意：只列命令，不含真实输出）</span></div>
+<pre><span class="g"># 启动网页界面（需要 Node.js 22.19 或更新）</span>
+<span class="p">$</span> npx @deepseek-ai/dsh web
+<span class="g"># 另开一个终端，装插件；装完重启 dsh</span>
+<span class="p">$</span> dsh plugin --profile web add dsh-kb-rag
+<span class="p">$</span> dsh plugin --profile web add dsh-deepread
+<span class="p">$</span> dsh plugin --profile web add lunheng-article-pipeline
+<span class="p">$</span> dsh plugin --profile web add dsh-task-supervisor</pre>
+</div></body></html>

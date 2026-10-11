@@ -1,0 +1,14 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8">
+<meta name="shot" content="11-用DeepSeekHarness做科研装这几个插件把流程跑通|03-screenshot-deep-research.png|1000x700">
+<link rel="stylesheet" href="_agent-ui.css">
+</head><body><div class="app">
+<div class="side"><div class="h">会话</div><div class="s on">文献调研</div><div class="s">读论文</div><div class="s">写综述初稿</div><div class="s">整理文献库</div></div>
+<div class="main">
+<div class="top"><b>thesis-lit</b><span>·</span><span>deep_research</span></div>
+<div class="chat">
+<div class="u">调研一下“轻量化注意力模块在遥感图像分割里的进展”，用来决定我要不要做这个方向。要有来源，有把握的和没把握的分开写。</div><div class="tool"><span class="n">deep_research</span><span class="p">depth=2, review=true, purpose="决定是否做该方向"</span><span class="r">规划 5 个子问题</span></div><div class="tool"><span class="n">web_search / web_fetch</span><span class="p">第 1 轮：5 个子问题并行</span><span class="r w">发现 2 个缺口</span></div><div class="tool"><span class="n">web_search / web_fetch</span><span class="p">第 2 轮：补查缺口</span><span class="r">收敛</span></div><div class="tool"><span class="n">review</span><span class="p">引用抽查、覆盖度检查</span><span class="r w">1 条引用无法打开</span></div><div class="a"><div class="body"><p>调研结束，证据分成三栏：</p><table><tr><th>状态</th><th>条数</th><th>怎么处理</th></tr><tr><td><span class="tag tg">confirmed</span></td><td>示意：N 条</td><td>附链接，可进综述，仍需你抽查原文</td></tr><tr><td><span class="tag ty">uncertain</span></td><td>示意：N 条</td><td>只有单一来源，或来源之间矛盾，先别引用</td></tr><tr><td><span class="tag tr">gaps</span></td><td>示意：N 条</td><td>没查到的，如“中文期刊上的对比数据”，需要你补</td></tr></table><p>审查提示：有 1 条引用链接打不开，已从“确认”降为“不确定”。</p></div></div>
+</div>
+<div class="input"><span>输入任务…</span><i>↑</i></div>
+<div class="note">示意界面（仿桌面客户端样式），不是 DeepSeek Harness 的真实界面；对话、文件和数字均为示意，工具名与参数取自各插件 README。</div>
+</div></div></body></html>

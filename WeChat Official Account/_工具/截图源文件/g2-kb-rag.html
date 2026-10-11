@@ -1,0 +1,14 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8">
+<meta name="shot" content="11-用DeepSeekHarness做科研装这几个插件把流程跑通|02-screenshot-kb-rag.png|1000x720">
+<link rel="stylesheet" href="_agent-ui.css">
+</head><body><div class="app">
+<div class="side"><div class="h">会话</div><div class="s">文献调研</div><div class="s">读论文</div><div class="s">写综述初稿</div><div class="s on">整理文献库</div></div>
+<div class="main">
+<div class="top"><b>thesis-lit</b><span>·</span><span>本地文献库</span></div>
+<div class="chat">
+<div class="u">把 ~/papers 里的 PDF 入库，再同步我的 Zotero。完成后问：把通道注意力和空间注意力串联起来，在 ResNet 上是怎么做的？只用我库里的文献回答。</div><div class="tool"><span class="n">kb_ingest</span><span class="p">path=~/papers</span><span class="r">后台任务 · job_id=a3f1</span></div><div class="tool"><span class="n">kb_status</span><span class="p">job_id=a3f1</span><span class="r w">完成 · 扫描件 1 篇被跳过（没有文字层）</span></div><div class="tool"><span class="n">kb_zotero</span><span class="p">sync, 含 PDF 附件</span><span class="r">已同步</span></div><div class="tool"><span class="n">kb_scope</span><span class="p">strict=true</span><span class="r">只用库内文献</span></div><div class="tool"><span class="n">kb_rag</span><span class="p">query="channel attention spatial attention ResNet", mode=deep</span><span class="r">3 条证据</span></div><div class="a"><div class="body"><p>库内文献显示：CBAM 在每个残差块的输出上依次施加通道注意力和空间注意力，再与恒等分支相加 <b>[1]</b>。Attention Is All You Need 讲的是自注意力，不是这种“逐通道 / 逐位置加权”的结构，不能直接当作同一类方法引用 <b>[2]</b>。</p><table><tr><th>#</th><th>文献</th><th>位置</th><th>状态</th></tr><tr><td>1</td><td>Woo 等，CBAM，2018</td><td>第 3 页</td><td><span class="tag tg">in-library</span></td></tr><tr><td>2</td><td>Vaswani 等，Attention Is All You Need，2017</td><td>第 2 页</td><td><span class="tag tg">in-library</span></td></tr></table><p>库里没有找到“空间注意力卷积核大小”的消融实验，这一点我没有编。</p></div></div>
+</div>
+<div class="input"><span>输入任务…</span><i>↑</i></div>
+<div class="note">示意界面（仿桌面客户端样式），不是 DeepSeek Harness 的真实界面；对话、文件和数字均为示意，工具名与参数取自各插件 README。</div>
+</div></div></body></html>
