@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8">
+<meta name="shot" content="05-Agent能连着干几个小时了科研项目怎么管才不翻车|01-screenshot-experiments-json.png|960x560">
+<style>
+body{margin:0;background:#1b1e27;font-family:"WenQuanYi Zen Hei","Noto Sans CJK SC",sans-serif;color:#cfd6e6}
+.win{margin:20px;border-radius:10px;overflow:hidden;background:#232733;box-shadow:0 8px 30px rgba(0,0,0,.45)}
+.bar{background:#171a22;padding:10px 14px;display:flex;gap:8px;align-items:center;font-size:13px;color:#7d869b}
+.d{width:12px;height:12px;border-radius:50%}
+.main{display:flex}
+.tree{width:210px;background:#1e212b;padding:14px 0;font-size:15px;font-family:"DejaVu Sans Mono","WenQuanYi Zen Hei",monospace;line-height:2;border-right:1px solid #2b2f3c}
+.tree div{padding-left:18px;white-space:nowrap}.i1{padding-left:36px!important}
+.sel{background:#2c3242;color:#fff}.dim{color:#8590a8}
+.ed{flex:1}
+.tabs{background:#1e212b}
+.tab{background:#232733;display:inline-block;padding:9px 18px;font-size:14px;border-top:2px solid #fca311;color:#fff;font-family:"DejaVu Sans Mono",monospace}
+pre{margin:0;padding:14px 20px 18px;font-family:"DejaVu Sans Mono","WenQuanYi Zen Hei",monospace;font-size:14px;line-height:1.6}
+.k{color:#7cc7ff}.s{color:#9fd57c}.t{color:#ffc857}.g{color:#6e7891}
+</style></head><body><div class="win">
+<div class="bar"><span class="d" style="background:#ff5f56"></span><span class="d" style="background:#ffbd2e"></span><span class="d" style="background:#27c93f"></span><span style="margin-left:12px">我的课题 — experiments.json</span></div>
+<div class="main">
+<div class="tree">
+<div class="dim">我的课题</div>
+<div class="i1">CLAUDE.md</div>
+<div class="i1">progress.md</div>
+<div class="i1 sel">experiments.json</div>
+<div class="i1">run.sh</div>
+<div class="i1 dim">configs</div>
+<div class="i1 dim">src</div>
+<div class="i1 dim">results</div>
+</div>
+<div class="ed"><div class="tabs"><span class="tab">experiments.json</span></div>
+<pre>[
+  {
+    <span class="k">"id"</span>: <span class="s">"exp-006"</span>,
+    <span class="k">"goal"</span>: <span class="s">"baseline 复跑，3 个随机种子"</span>,
+    <span class="k">"acceptance"</span>: <span class="s">"val_acc 取三次平均，写入 results/exp006.json"</span>,
+    <span class="k">"status"</span>: <span class="t">"done"</span>
+  },
+  {
+    <span class="k">"id"</span>: <span class="s">"exp-007"</span>,
+    <span class="k">"goal"</span>: <span class="s">"学习率改为 3e-4，其余同 baseline"</span>,
+    <span class="k">"acceptance"</span>: <span class="s">"同上；与 exp-006 对比，差异写进 progress.md"</span>,
+    <span class="k">"status"</span>: <span class="t">"running"</span>
+  },
+  {
+    <span class="k">"id"</span>: <span class="s">"exp-008"</span>,
+    <span class="k">"goal"</span>: <span class="s">"换用另一数据划分，检验结论是否稳定"</span>,
+    <span class="k">"acceptance"</span>: <span class="s">"同上；不得修改 data/splits/ 下的任何文件"</span>,
+    <span class="k">"status"</span>: <span class="t">"todo"</span>
+  }
+]</pre></div></div></div></body></html>
