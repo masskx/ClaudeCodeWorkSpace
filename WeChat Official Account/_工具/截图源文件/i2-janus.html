@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8">
+<meta name="shot" content="12-拿Jev做深度学习创新别当骨干网络用这10个思路网上都有现成代码|03-screenshot-janus-results.png|960x420">
+<style>body{margin:0;background:#f5f6f8;font-family:"WenQuanYi Zen Hei","Noto Sans CJK SC",sans-serif;color:#222}.wrap{padding:24px 26px}
+h4{margin:0 0 8px;font-weight:normal;color:#556;font-size:15px}
+table{border-collapse:collapse;width:100%;background:#fff;font-size:14.5px;line-height:1.5;margin-bottom:18px}
+th{background:#eef1f6;color:#556;font-weight:normal;text-align:left}
+th,td{border:1px solid #dfe3ea;padding:8px 11px}
+td.m{font-family:"DejaVu Sans Mono","WenQuanYi Zen Hei",monospace;font-size:13.5px}
+.g{color:#1e8449}.r{color:#c0392b}
+.f{color:#9aa1b0;font-size:13px;text-align:right}
+</style></head><body><div class="wrap">
+<h4>Banking77（500 条）：先问 Jev，把握不够再交给 DeepSeek</h4>
+<table><tr><th>策略</th><th>阈值</th><th>留在 Jev 的比例</th><th>准确率</th><th>费用</th><th>p50 延迟</th></tr>
+<tr><td>只用 Jev</td><td class="m">–</td><td class="m">100%</td><td class="m">77.8%</td><td class="m">$0.0507</td><td class="m">296 ms</td></tr>
+<tr><td>只用 DeepSeek</td><td class="m">–</td><td class="m">0%</td><td class="m">78.8%</td><td class="m">$0.2207</td><td class="m">2269 ms</td></tr>
+<tr><td>级联</td><td class="m">0.67</td><td class="m">88.4%</td><td class="m g">80.2%</td><td class="m g">$0.1033</td><td class="m g">302 ms</td></tr></table>
+<h4>Web of Science（500 条）：同样的做法</h4>
+<table><tr><th>结论</th><th>最优阈值</th><th>说明</th></tr>
+<tr><td class="r">不要用级联</td><td class="m">0.37</td><td>没有任何阈值比较好的单模型更准；级联贵 47%</td></tr></table>
+<div class="f">数据来自 Janus 项目 README 的自报结果，我没有复跑。</div></div></body></html>
