@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8">
+<meta name="shot" content="12-拿Jev做深度学习创新别当骨干网络用这10个思路网上都有现成代码|02-screenshot-overview-table.png|1040x700">
+<style>body{margin:0;background:#f5f6f8;font-family:"WenQuanYi Zen Hei","Noto Sans CJK SC",sans-serif;color:#222}.wrap{padding:24px 26px}
+table{border-collapse:collapse;width:100%;background:#fff;font-size:14.5px;line-height:1.5}
+th{background:#eef1f6;color:#556;font-weight:normal;text-align:left}
+th,td{border:1px solid #dfe3ea;padding:8px 11px;vertical-align:top}
+td.n{text-align:center;color:#889;width:34px}
+.a{color:#1e8449}.b{color:#b9770e}.c{color:#7f8c8d}
+.f{color:#9aa1b0;font-size:13px;margin-top:10px;text-align:right}
+</style></head><body><div class="wrap"><table>
+<tr><th>#</th><th>思路</th><th>放在流水线哪一步</th><th>网上能找到的</th><th>证据等级</th></tr>
+<tr><td class="n">1</td><td>逐条筛训练数据</td><td>数据</td><td>jev-curate</td><td class="c">C 只有工具说明</td></tr>
+<tr><td class="n">2</td><td>不确定样本主动学习</td><td>数据</td><td>jev-align</td><td class="c">C 只有工具说明</td></tr>
+<tr><td class="n">3</td><td>用概率分布做软标签蒸馏</td><td>训练</td><td>Jevstiller、jev-vs-small-llms</td><td class="b">B 项目自测，有数字</td></tr>
+<tr><td class="n">4</td><td>让 LLM 提问，Jev 变成特征</td><td>特征</td><td>官方 cookbook</td><td class="c">C 只有示例</td></tr>
+<tr><td class="n">5</td><td>置信度门控的级联</td><td>推理</td><td>Janus</td><td class="b">B 项目自测，有数字</td></tr>
+<tr><td class="n">6</td><td>带统计保证的自动化</td><td>推理</td><td>jev-certify</td><td class="b">B 项目自测，有数字</td></tr>
+<tr><td class="n">7</td><td>给检索结果重排序</td><td>推理</td><td>官方 cookbook、Hippo Memory、orderby-bench</td><td class="b">B 有正反两面的数字</td></tr>
+<tr><td class="n">8</td><td>层级分类加回退标签</td><td>推理</td><td>官方 cookbook</td><td class="c">C 只有示例</td></tr>
+<tr><td class="n">9</td><td>便宜的校准评审员</td><td>评估</td><td>RLCDAlignBench、独立复现</td><td class="a">A 有论文和第三方复现</td></tr>
+<tr><td class="n">10</td><td>审计基准的“强制选择”缺陷</td><td>评估</td><td>jev-calibration-audit</td><td class="b">B 项目自测，有数字</td></tr>
+</table>
+<div class="f">证据等级是我按公开资料给的：A 有论文并被第三方复现；B 开源项目自己测过；C 只有说明或示例，没有结果。未经我复跑。</div></div></body></html>
