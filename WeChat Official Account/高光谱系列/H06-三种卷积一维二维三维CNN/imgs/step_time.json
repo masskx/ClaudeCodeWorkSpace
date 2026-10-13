@@ -1,0 +1,1 @@
+{"note": "ms per training step, batch 256, random input, CPU 2 threads, 2 repeats", "ms": {"train_1d_cnn": [48.8, 34.7], "train_2d_cnn": [29.2, 24.7], "train_3d_cnn": [74.8, 74.7]}}

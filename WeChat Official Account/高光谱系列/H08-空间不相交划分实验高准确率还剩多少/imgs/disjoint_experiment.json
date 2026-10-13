@@ -1,0 +1,95 @@
+{
+ "config": {
+  "block": 20,
+  "train_frac_blocks": 0.3,
+  "val_frac_blocks": 0.1,
+  "epochs": 40,
+  "buffer_chebyshev": 8
+ },
+ "runs": [
+  {
+   "seed": 0,
+   "n_train": 3581,
+   "n_val": 827,
+   "n_test": 2744,
+   "disjoint": {
+    "OA_all": 0.40233236151603496,
+    "OA_seen": 0.4519033974621367,
+    "AA_seen": 0.4859755304143198,
+    "classes_train": 13,
+    "classes_test": 12,
+    "classes_both": 9,
+    "share_test_seen": 0.8903061224489796,
+    "val_acc": 0.2309552599758162,
+    "best_epoch": 37
+   },
+   "random": {
+    "OA_all": 0.9941690962099126,
+    "OA_seen": 0.9941690962099126,
+    "AA_seen": 0.9956323867906666,
+    "classes_train": 16,
+    "classes_test": 16,
+    "classes_both": 16,
+    "share_test_seen": 1.0,
+    "val_acc": 0.9975816203143894,
+    "best_epoch": 38
+   }
+  },
+  {
+   "seed": 1,
+   "n_train": 3368,
+   "n_val": 416,
+   "n_test": 3147,
+   "disjoint": {
+    "OA_all": 0.3508102955195424,
+    "OA_seen": 0.3539596024366784,
+    "AA_seen": 0.23965752675126203,
+    "classes_train": 15,
+    "classes_test": 12,
+    "classes_both": 11,
+    "share_test_seen": 0.9911026374324754,
+    "val_acc": 0.46875,
+    "best_epoch": 1
+   },
+   "random": {
+    "OA_all": 0.9866539561487131,
+    "OA_seen": 0.9866539561487131,
+    "AA_seen": 0.87422602026593,
+    "classes_train": 16,
+    "classes_test": 16,
+    "classes_both": 16,
+    "share_test_seen": 1.0,
+    "val_acc": 0.9975961538461539,
+    "best_epoch": 15
+   }
+  },
+  {
+   "seed": 2,
+   "n_train": 2950,
+   "n_val": 876,
+   "n_test": 3858,
+   "disjoint": {
+    "OA_all": 0.29341627786417834,
+    "OA_seen": 0.32707310026004044,
+    "AA_seen": 0.19946284691136973,
+    "classes_train": 14,
+    "classes_test": 12,
+    "classes_both": 10,
+    "share_test_seen": 0.8970969414204251,
+    "val_acc": 0.295662100456621,
+    "best_epoch": 1
+   },
+   "random": {
+    "OA_all": 0.9880767236910316,
+    "OA_seen": 0.9880767236910316,
+    "AA_seen": 0.9770548199754052,
+    "classes_train": 16,
+    "classes_test": 16,
+    "classes_both": 16,
+    "share_test_seen": 1.0,
+    "val_acc": 0.9965753424657534,
+    "best_epoch": 38
+   }
+  }
+ ]
+}
