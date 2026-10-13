@@ -19,6 +19,7 @@ from matplotlib import font_manager
 
 RUN, OUT = sys.argv[1], sys.argv[2]
 EPOCHS = int(sys.argv[3]) if len(sys.argv) > 3 else 60
+REPLOT = len(sys.argv) > 4 and sys.argv[4] == "replot"   # 只用已有 json 重画图
 torch.set_num_threads(4)
 
 
@@ -72,19 +73,22 @@ def train_eval(mk, kind, tr, seed=42):
     return float((p == yt).mean()), float(np.mean(rec)), best, be
 
 
-out = {"epochs": EPOCHS, "n_test": int(len(te_idx)), "n_val": int(len(va_idx)), "rows": []}
-for rate in RATES:
-    tr = sub[rate]
-    for name, kind, mk, seeds in [("谱 Transformer", "tf", lambda: tf.SpectralTransformerClassifier(200, 16), (42,)),
-                                  ("1D CNN", "cnn", lambda: cn.SpectralCNN1D(200, 16), (42, 43, 44))]:
-        t0 = time.time(); rs = [train_eval(mk, kind, tr, sd) for sd in seeds]
-        row = {"train_rate": rate, "n_train": int(len(tr)), "model": name, "init_seeds": list(seeds),
-               "OA": float(np.mean([r[0] for r in rs])), "AA": float(np.mean([r[1] for r in rs])),
-               "OA_sd": float(np.std([r[0] for r in rs], ddof=1)) if len(rs) > 1 else None,
-               "AA_sd": float(np.std([r[1] for r in rs], ddof=1)) if len(rs) > 1 else None,
-               "OA_each": [float(r[0]) for r in rs], "best_epoch": [r[3] for r in rs], "sec": round(time.time() - t0)}
-        out["rows"].append(row); print(json.dumps(row, ensure_ascii=False), flush=True)
-        json.dump(out, open(os.path.join(OUT, "transformer_data_curve.json"), "w"), ensure_ascii=False, indent=1)
+if REPLOT:
+    out = json.load(open(os.path.join(OUT, "transformer_data_curve.json")))
+else:
+    out = {"epochs": EPOCHS, "n_test": int(len(te_idx)), "n_val": int(len(va_idx)), "rows": []}
+    for rate in RATES:
+        tr = sub[rate]
+        for name, kind, mk, seeds in [("谱 Transformer", "tf", lambda: tf.SpectralTransformerClassifier(200, 16), (42,)),
+                                      ("1D CNN", "cnn", lambda: cn.SpectralCNN1D(200, 16), (42, 43, 44))]:
+            t0 = time.time(); rs = [train_eval(mk, kind, tr, sd) for sd in seeds]
+            row = {"train_rate": rate, "n_train": int(len(tr)), "model": name, "init_seeds": list(seeds),
+                   "OA": float(np.mean([r[0] for r in rs])), "AA": float(np.mean([r[1] for r in rs])),
+                   "OA_sd": float(np.std([r[0] for r in rs], ddof=1)) if len(rs) > 1 else None,
+                   "AA_sd": float(np.std([r[1] for r in rs], ddof=1)) if len(rs) > 1 else None,
+                   "OA_each": [float(r[0]) for r in rs], "best_epoch": [r[3] for r in rs], "sec": round(time.time() - t0)}
+            out["rows"].append(row); print(json.dumps(row, ensure_ascii=False), flush=True)
+            json.dump(out, open(os.path.join(OUT, "transformer_data_curve.json"), "w"), ensure_ascii=False, indent=1)
 
 for f_ in font_manager.findSystemFonts():
     if "wqy" in f_.lower(): font_manager.fontManager.addfont(f_)
@@ -95,7 +99,7 @@ for k, (metric, title) in enumerate([("OA", "OA（测试集）"), ("AA", "AA（�
         rows = [r for r in out["rows"] if r["model"] == name]
         ax[k].errorbar([r["n_train"] for r in rows], [r[metric] * 100 for r in rows], yerr=[(r[metric + "_sd"] or 0) * 100 for r in rows], fmt="o-", color=col, capsize=3, label=name + ("（3 个初始化均值±标准差）" if name == "1D CNN" else "（1 个种子）"))
         for r in rows: ax[k].annotate(f"{r[metric]*100:.1f}", (r["n_train"], r[metric] * 100), textcoords="offset points", xytext=(0, 6), ha="center", fontsize=8, color=col)
-    ax[k].set_xscale("log"); ax[k].set_xlabel("训练样本数（对数轴）"); ax[k].set_ylabel("%"); ax[k].set_title(title)
+    ax[k].set_xscale("log"); ax[k].set_xticks([512, 1024, 3072, 6144]); ax[k].set_xticklabels(["512\n(5%)", "1024\n(10%)", "3072\n(30%)", "6144\n(60%)"]); ax[k].minorticks_off(); ax[k].set_xlabel("训练样本数（对数轴）"); ax[k].set_ylabel("%"); ax[k].set_title(title)
     ax[k].legend(frameon=False)
     for s in ("top", "right"): ax[k].spines[s].set_visible(False)
 plt.suptitle(f"训练样本越多，Transformer 和 1D CNN 的差距怎么变？（{EPOCHS} epochs，固定测试集 {out['n_test']} 个像元）", fontsize=10)
