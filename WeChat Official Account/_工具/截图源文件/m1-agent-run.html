@@ -1,0 +1,11 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8">
+<meta name="shot" content="15-十分钟搞定研究生组会五篇论文做成让导师满意的组会PPT|01-screenshot-agent-run.png|1000x560">
+<link rel="stylesheet" href="_agent-ui.css"></head><body><div class="app">
+<div class="side"><div class="h">会话</div><div class="s on">组会 PPT</div><div class="s">文献调研</div><div class="s">读论文</div></div>
+<div class="main"><div class="top"><b>group-meeting</b><span>·</span><span>五篇论文</span></div>
+<div class="chat"><div class="u">读这五篇论文：Transformer、ResNet、ViT、CLIP、DDPM。每篇找出问题、做法、最关键的数字和作者承认的局限，做成 10 分钟的组会 PPT。数字必须来自论文原文，没有把握的不要写。</div>
+<div class="tool"><span class="n">Bash</span><span class="p">curl × 5　下载 5 篇论文 PDF</span><span class="r">共约 24.7 MB</span></div><div class="tool"><span class="n">Bash</span><span class="p">pdftotext × 5　提取全文</span><span class="r">15 / 12 / 22 / 48 / 25 页</span></div><div class="tool"><span class="n">Bash</span><span class="p">grep 摘要、结果表、局限段</span><span class="r">逐篇核对数字</span></div><div class="tool"><span class="n">Write</span><span class="p">notes.json</span><span class="r">5 篇读书笔记</span></div><div class="tool"><span class="n">Write</span><span class="p">make_ppt.py</span><span class="r">按笔记生成幻灯片</span></div><div class="tool"><span class="n">Bash</span><span class="p">python3 make_ppt.py</span><span class="r">已生成 组会示例.pptx，共 11 页</span></div><div class="tool"><span class="n">Bash</span><span class="p">soffice 转 PDF，pdftoppm 逐页转图片</span><span class="r w">11 页预览，检查排版</span></div><div class="a"><div class="body"><p>已生成 11 页：封面、先说结论、为什么是这五篇、五篇各一页、对照表、对课题的启发、备用页。预览时发现有 3 处排版问题（图表超出边框、标题换行、分隔线带阴影），已修正后重新渲染。</p></div></div></div>
+<div class="input"><span>输入任务…</span><i>↑</i></div>
+<div class="note">按本次真实操作记录重新排版（工具调用、页数、文件大小均取自真实运行），样式仿桌面客户端；不是客户端原截图。</div>
+</div></div></body></html>

@@ -1,0 +1,18 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8">
+<meta name="shot" content="15-十分钟搞定研究生组会五篇论文做成让导师满意的组会PPT|03-screenshot-notes.png|960x400">
+<style>
+body{margin:0;background:#f5f6f8;font-family:"WenQuanYi Zen Hei","Noto Sans CJK SC",sans-serif;color:#222}
+.w{padding:20px 24px}.t{color:#556;font-size:14px;margin-bottom:8px}
+pre{margin:0;background:#1d2230;color:#e4e9f5;border-radius:8px;padding:16px 20px;font-family:"DejaVu Sans Mono","WenQuanYi Zen Hei",monospace;font-size:14px;line-height:1.6;white-space:pre-wrap}
+.k{color:#ff9d5c}.s{color:#9ad39a}.c{color:#8794ad}
+</style></head><body><div class="w"><div class="t">notes.json（读完论文后写下的笔记，节选第 1 篇）</div>
+<pre>{
+  <span class="k">"key"</span>: <span class="s">"resnet"</span>, <span class="k">"arxiv"</span>: <span class="s">"1512.03385"</span>,
+  <span class="k">"problem"</span>: [<span class="s">"网络加深后训练误差反而升高（退化问题）"</span>, <span class="s">"不是过拟合，是优化困难"</span>],
+  <span class="k">"method"</span>:  [<span class="s">"把层改写成学习残差 F(x)，输出 F(x) + x"</span>, <span class="s">"快捷连接不增加参数"</span>],
+  <span class="k">"stat"</span>: <span class="s">"25.03% vs 28.54%"</span>,
+  <span class="k">"stat_cap"</span>: <span class="s">"ImageNet 34 层，有/无残差的 top-1 错误率，参数量相同"</span>,
+  <span class="k">"limit"</span>: [<span class="s">"为什么深的普通网络难优化，作者写“留待未来研究”"</span>,
+            <span class="s">"CIFAR-10 上 1202 层变差，作者归因于过拟合（19.4M 参数对小数据集太大）"</span>]
+}</pre></div></body></html>

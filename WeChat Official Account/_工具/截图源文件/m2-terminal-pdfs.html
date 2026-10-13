@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8">
+<meta name="shot" content="15-十分钟搞定研究生组会五篇论文做成让导师满意的组会PPT|02-screenshot-terminal-pdfs.png|960x330">
+<style>
+body{margin:0;background:#1b1e27;font-family:"DejaVu Sans Mono","WenQuanYi Zen Hei",monospace;color:#d6dcec}
+.win{margin:20px;border-radius:10px;overflow:hidden;background:#232733;box-shadow:0 8px 30px rgba(0,0,0,.45)}
+.bar{background:#171a22;padding:10px 14px;display:flex;gap:8px;align-items:center;font-size:13px;color:#7d869b;font-family:"WenQuanYi Zen Hei",sans-serif}
+.d{width:12px;height:12px;border-radius:50%}
+pre{margin:0;padding:18px 22px 22px;font-size:14.5px;line-height:1.75;white-space:pre-wrap}
+.p{color:#7cc7ff}.g{color:#7d869b}.ok{color:#7ddc9a}
+</style></head><body><div class="win">
+<div class="bar"><span class="d" style="background:#ff5f56"></span><span class="d" style="background:#ffbd2e"></span><span class="d" style="background:#27c93f"></span><span style="margin-left:12px">终端（真实输出，节选）</span></div>
+<pre><span class="p">$</span> curl ... 下载五篇 PDF
+1706.03762 -&gt; <span class="ok">200</span> 2234111      <span class="g"># Attention Is All You Need</span>
+resnet     -&gt; <span class="ok">200</span> 1078743      <span class="g"># Deep Residual Learning</span>
+vit        -&gt; <span class="ok">200</span> 3917838      <span class="g"># An Image Is Worth 16x16 Words</span>
+2103.00020 -&gt; <span class="ok">200</span> 6882228      <span class="g"># CLIP</span>
+2006.11239 -&gt; <span class="ok">200</span> 10543856     <span class="g"># DDPM</span>
+<span class="p">$</span> 用 pdfplumber 读每份 PDF 的第一页，核对标题和页数
+1706.03762.pdf 15 pages | Attention Is All You Need
+2006.11239.pdf 25 pages | Denoising Diffusion Probabilistic Models
+2103.00020.pdf 48 pages | Learning Transferable Visual Models From Natural Language Supervision
+resnet.pdf 12 pages | Deep Residual Learning for Image Recognition
+vit.pdf 22 pages | AN IMAGE IS WORTH 16X16 WORDS: ...</pre>
+</div></body></html>
