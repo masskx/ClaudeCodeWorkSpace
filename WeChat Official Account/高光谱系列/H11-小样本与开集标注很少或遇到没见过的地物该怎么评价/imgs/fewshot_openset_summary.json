@@ -1,0 +1,89 @@
+{
+ "protonet": {
+  "kshot_mean": {
+   "1": 0.6626666694879532,
+   "5": 0.8066666642824809,
+   "10": 0.8120000044504802
+  },
+  "kshot_episode_std": {
+   "1": 0.08768805431066222,
+   "5": 0.08856454019216768,
+   "10": 0.08735184302759415
+  },
+  "n_episodes": 30,
+  "paired_diff_5_minus_1": [
+   0.14399999479452769,
+   0.019801311809453714
+  ],
+  "paired_diff_10_minus_5": [
+   0.005333340167999268,
+   0.013927012161413212
+  ],
+  "episodes_10_better_worse_tie_than_5": [
+   18,
+   8,
+   4
+  ],
+  "annotation_budget": 6898,
+  "best_val": 0.8946666598320008,
+  "val_accuracy_at_episodes": {
+   "1": 0.8946666598320008,
+   "50": 0.765333338578542,
+   "100": 0.7933333337306976,
+   "150": 0.8226666669050853,
+   "200": 0.8573333243529002
+  }
+ },
+ "openset": [
+  {
+   "seed": "42",
+   "known_accuracy": 0.9623602484472049,
+   "msp_auroc": 0.6033284618195105,
+   "dist_auroc": 0.8635991629853522,
+   "msp_unknown_recall": 0.2620320855614973,
+   "dist_unknown_recall": 0.5828877005347594,
+   "msp_known_false_rejection": 0.06012422360248447,
+   "dist_known_false_rejection": 0.06583850931677018
+  },
+  {
+   "seed": "1",
+   "known_accuracy": 0.9699378881987578,
+   "msp_auroc": 0.6946454312950476,
+   "dist_auroc": 0.9518391071843756,
+   "msp_unknown_recall": 0.26737967914438504,
+   "dist_unknown_recall": 0.7112299465240641,
+   "msp_known_false_rejection": 0.05850931677018634,
+   "dist_known_false_rejection": 0.04695652173913043
+  },
+  {
+   "seed": "2",
+   "known_accuracy": 0.96472049689441,
+   "msp_auroc": 0.832441957019962,
+   "dist_auroc": 0.9182940844321918,
+   "msp_unknown_recall": 0.3048128342245989,
+   "dist_unknown_recall": 0.7165775401069518,
+   "msp_known_false_rejection": 0.05565217391304348,
+   "dist_known_false_rejection": 0.05515527950310559
+  },
+  {
+   "seed": "3",
+   "known_accuracy": 0.970807453416149,
+   "msp_auroc": 0.5259149035108115,
+   "dist_auroc": 0.9539050719101869,
+   "msp_unknown_recall": 0.25668449197860965,
+   "dist_unknown_recall": 0.8502673796791443,
+   "msp_known_false_rejection": 0.05080745341614907,
+   "dist_known_false_rejection": 0.05863354037267081
+  },
+  {
+   "seed": "4",
+   "known_accuracy": 0.9527950310559006,
+   "msp_auroc": 0.6817128906898727,
+   "dist_auroc": 0.9607506559936227,
+   "msp_unknown_recall": 0.39572192513368987,
+   "dist_unknown_recall": 0.8288770053475936,
+   "msp_known_false_rejection": 0.06012422360248447,
+   "dist_known_false_rejection": 0.052795031055900624
+  }
+ ]
+}
